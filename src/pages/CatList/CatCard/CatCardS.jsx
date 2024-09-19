@@ -77,4 +77,30 @@ export const BookcardS = styled(Bookcard)`
       }
     }
   }
+
+  @media (max-width: 1024px) {
+    width: 250px;
+    height: 350px;
+
+    .bookcard-description {
+      font-size: 1.3em;
+    }
+
+    .bookcard-text {
+      font-size: 0.9em;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 200px;
+    height: 300px;
+
+    .bookcard-description {
+      font-size: 1.1em;
+    }
+
+    .bookcard-text {
+      font-size: 0.8em;
+    }
+  }
 `;

@@ -21,6 +21,19 @@ const StyledSlider = styled(Slider)`
     margin: 0 -10px;
     margin-left: -120px;
   }
+  @media (max-width: 1024px) {
+    width: 2000px;
+  }
+
+  @media (max-width: 768px) {
+    .slick-slide > div {
+      margin: 0 5px;
+    }
+
+    .slick-list {
+      margin: 0 -5px;
+    }
+  }
 `;
 
 const ArrowButton = styled.button`

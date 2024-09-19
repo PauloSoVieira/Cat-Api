@@ -24,6 +24,7 @@ const CatsAlbum = ({ className }) => {
       setDataCat(data);
       console.log(data);
       const totalCount = result.headers.get("pagination-count");
+      console.log(totalCount);
       setTotalPages(Math.ceil(totalCount / catsPerPage));
     } catch (error) {
       console.error("Error fetching cat data:", error);

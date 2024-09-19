@@ -43,3 +43,50 @@
     left: 50%;
   }
 }
+
+
+@media screen and (max-width: 1024px) {
+  .cat-walk-container {
+    height: 220px;
+  }
+
+  .cat-sprite {
+    scale: 30%;
+    height: 320px;
+    width: 8640px;
+  }
+
+  @keyframes sprite-animation {
+    to {
+      background-position: -6496px 0px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .cat-walk-container {
+    height: 180px;
+  }
+
+  .cat-sprite {
+    scale: 25%;
+    height: 280px;
+    width: 7560px;
+  }
+
+  @keyframes sprite-animation {
+    to {
+      background-position: -5684px 0px;
+    }
+  }
+
+  @keyframes move-left {
+    from {
+      left: -400%;
+    }
+    to {
+      left: 100%;
+    }
+  }
+}
