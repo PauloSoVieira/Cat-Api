@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { Heart, Info } from "lucide-react";
+import { useUser } from "../../../pages/User/User";
 
 const Bookcard = ({ className, id, imageUrl, height }) => {
-  const [likes, setLikes] = useState(0);
-  const [isLiked, setIsLiked] = useState(false);
+  const { user, likeCat } = useUser();
+  const isLiked = user && user.likedCats.includes(id);
 
   const handleLike = () => {
-    if (!isLiked) {
-      setLikes(likes + 1);
-      setIsLiked(false);
+    if (user) {
+      likeCat(id);
+      console.log(`Cat ${id} ${isLiked ? "unliked" : "liked"}`);
     } else {
-      setLikes(likes - 1);
-      setIsLiked(false);
+      alert("Please login to like cats");
     }
   };
 
@@ -36,7 +36,7 @@ const Bookcard = ({ className, id, imageUrl, height }) => {
               size={24}
               color={isLiked ? "red" : "currentColor"}
             />
-            <span>{likes} likes</span>
+            <span>{isLiked ? "Liked" : "Like"}</span>
           </div>
         </div>
       </div>
