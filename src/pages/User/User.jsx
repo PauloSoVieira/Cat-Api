@@ -8,6 +8,7 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
+      //convert to object
       const parsedUser = JSON.parse(storedUser);
       console.log("Retrieved user from localStorage:", parsedUser);
       setUser(parsedUser);
