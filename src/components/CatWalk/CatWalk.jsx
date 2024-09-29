@@ -1,5 +1,5 @@
 import React from "react";
-import "./CatWalk.css"; // Arquivo CSS que conterá a animação
+import "./CatWalk.css"; 
 
 const CatWalk = () => {
   return (
